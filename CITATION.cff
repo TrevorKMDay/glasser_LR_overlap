@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: glasser_LR_overlap
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Trevor K. M.
+    family-names: Day
+    email: trevor.day@georgetown.edu
+    affiliation: Georgetown University
+    orcid: 'https://orcid.org/0000-0003-2911-8312'
+abstract: >-
+  Code to determine how much a given Glasser parcel overlaps
+  with its homologue. Also creates left/left-on-RH and
+  right/right-on-LH parcellations.
+license: CC-BY-4.0
