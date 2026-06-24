@@ -61,3 +61,29 @@ ggplot(results2, aes(x = order, y = dice)) +
   scale_y_continuous(limits = c(NA, 1)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+write_csv(results2, "glasser_LR_overlap.csv")
+
+# Distribution of values
+
+library(RcppAlgos)
+
+expand <- comboGrid(results2$label, results2$label) %>%
+  as_tibble() %>%
+  filter_out(
+    Var1 == Var2
+  ) %>%
+  mutate(
+    dice1 = results2$dice[match(Var1, results2$label)],
+    dice2 = results2$dice[match(Var2, results2$label)],
+    avg_dice = (dice1 + dice2) / 2,
+    avg_dice_Z = scale(avg_dice)[, 1]
+  )
+
+write_csv(expand, "all_combn_dice.csv")
+
+ggplot(expand, aes(avg_dice)) +
+  geom_density() +
+  scale_x_continuous(limits = c(NA, 1)) +
+  theme_bw()
+ 
