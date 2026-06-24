@@ -54,7 +54,7 @@ if [ ! -e LLRR/seg-glasserflipped_newlabels.dlabel.nii ] ; then
     echo "Modifying keys"
     wb_command -cifti-label-modify-keys \
         ${flip} \
-        LLRR/all_labels.txt \
+        LLRR/newlabel_indices.txt \
         LLRR/seg-glasserflipped_newlabels.dlabel.nii
 
 fi

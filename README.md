@@ -23,7 +23,7 @@ We also wanted to create symmetric parcellations for sensitivity testing.
 We created files where the left parcels were projected onto the right (`LL`) 
 and vice versa (`RR`).
 
-This code is in `01b-create_LLRR_glasser.sh` and the resutling label files
+This code is in `01b-create_LLRR_glasser.sh` and the resulting label files
 are in `LLRR/`, with some intermediate files not uploaded to GitHub.
 
  [1]: https://balsa.wustl.edu/reference/6V6gD
